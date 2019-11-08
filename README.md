@@ -11,7 +11,9 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 ## Behavior Driven Development
 
 | Behavior | Input Example | Output Example |
-| - | - | - |
+| Allow user to create a pizza object | order pizza | constructor makes |
+| Allow user to choose pizza size | size medium | constructor makes medium |
+| Behavior | Input Example | Output Example |
 
 ## Github Link
 {[Github link to project](https://drewapeterson7671.github.io/week-1-code-review/index.html)}
