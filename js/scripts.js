@@ -6,19 +6,20 @@ function Pizza(customerName, pizzaSize, pizzaToppings) {
 }
 
 Pizza.prototype.calcPrice = function() {
+  var toppingPrice = 0;
   this.pizzaToppings.forEach(function(pizzaTopping){
     if (pizzaTopping === "pepperoni") {
-      this.pizzaPrice += 1;
-      console.log("Pep " + this.pizzaPrice);
-    } else if (pizzaTopping === "chicken") {
-      this.pizzaPrice += .8;
-    } else if (pizzaTopping === "Anchovies") {
-      this.pizzaPrice += 1.5;
-    } else {
-      this.pizzaPrice += .5;
-      console.log("others");
-    }
-  })
+      toppingPrice += 2;
+      } else if (pizzaTopping === "chicken") {
+        toppingPrice += 2;
+      } else if (pizzaTopping === "anchovies") {
+        toppingPrice += 3;
+      } else {
+        toppingPrice += 1;
+      }
+  });
+  console.log(toppingPrice);
+    this.pizzaPrice += toppingPrice;
   if (this.pizzaSize === "extra large") {
     this.pizzaPrice += 14;
     } else if (this.pizzaSize === "large") {
@@ -35,6 +36,6 @@ Pizza.prototype.calcPrice = function() {
 
 
 
-var pizzaOrder = new Pizza("George", "small", ["pepperoni", "olives", "mushrooms"])
+var pizzaOrder = new Pizza("George", "small", ["pepperoni", "chicken", "olives", "mushrooms"])
 
 console.log(pizzaOrder.calcPrice());
