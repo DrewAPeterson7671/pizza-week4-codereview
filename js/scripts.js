@@ -2,20 +2,20 @@ function Pizza(customerName, pizzaSize, pizzaToppings) {
   this.customerName = customerName,
   this.pizzaSize = pizzaSize,
   this.pizzaToppings = pizzaToppings,
-  this.pizzaPrice = 0
+  this.pizzaPrice = 0.0
 }
 
 Pizza.prototype.calcPrice = function() {
   var toppingPrice = 0;
   this.pizzaToppings.forEach(function(pizzaTopping){
     if (pizzaTopping === "pepperoni") {
-      toppingPrice += 2;
+      toppingPrice += 2.1;
       } else if (pizzaTopping === "chicken") {
-        toppingPrice += 2;
+        toppingPrice += 1.5;
       } else if (pizzaTopping === "anchovies") {
-        toppingPrice += 3;
+        toppingPrice += 2.65;
       } else {
-        toppingPrice += 1;
+        toppingPrice += 0.5;
       }
   });
   console.log(toppingPrice);
@@ -33,6 +33,8 @@ Pizza.prototype.calcPrice = function() {
     }
       return this.pizzaPrice;
   };
+
+
 
 
 
