@@ -3,7 +3,7 @@
 unction Pizza(customerName, pizzaSize, pizzaToppings) {
   this.customerName = customerName,
   this.pizzaSize = pizzaSize,
-  this.pizzaToppings = pizzaToppings,
+  this.pizzaToppings = pizzaToppingsArray,
   this.pizzaPrice = 0.0
 }
 
@@ -40,9 +40,9 @@ Pizza.prototype.calcPrice = function() {
 
 
 
-var pizzaOrder = new Pizza("George", "small", ["pepperoni", "chicken", "olives", "mushrooms"])
-
-console.log(pizzaOrder.calcPrice());
+// var pizzaOrder = new Pizza("George", "small", ["pepperoni", "chicken", "olives", "mushrooms"])
+//
+// console.log(pizzaOrder.calcPrice());
 
 //Frontend JavaScript
 
@@ -50,9 +50,21 @@ $(document).ready(function() {
   $("form#formInput").submit(function(event) {
     event.preventDefault();
 
-    var customerName = $("#customerNameInput").val();
-    
 
+    var pizzaToppingsArray = [];
+
+    var customerName = $("#customerNameInput").val();
+    var pizzaSize = $("input:radio[name=sizeInput]:checked").val();
+    var pizzaToppings = $("input:radio[name=toppingsInput]:checked").val();
+
+    pizzaToppings.forEach(function(pizzaTopping) {
+      pizzaToppingsArray.push(pizzaTopping.val());
+    });
+
+    var myPizza = new Pizza(customerName, pizzaSize, pizzaToppingsArray);
+    var price = myPizza.calcPrice;
+
+    $("#outputPrice").text(price);
 
 
   });
