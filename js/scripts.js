@@ -1,4 +1,6 @@
-function Pizza(customerName, pizzaSize, pizzaToppings) {
+// Backend Logic
+
+unction Pizza(customerName, pizzaSize, pizzaToppings) {
   this.customerName = customerName,
   this.pizzaSize = pizzaSize,
   this.pizzaToppings = pizzaToppings,
@@ -41,3 +43,17 @@ Pizza.prototype.calcPrice = function() {
 var pizzaOrder = new Pizza("George", "small", ["pepperoni", "chicken", "olives", "mushrooms"])
 
 console.log(pizzaOrder.calcPrice());
+
+//Frontend JavaScript
+
+$(document).ready(function() {
+  $("form#formInput").submit(function(event) {
+    event.preventDefault();
+
+    var customerName = $("#customerNameInput").val();
+    
+
+
+
+  });
+});
