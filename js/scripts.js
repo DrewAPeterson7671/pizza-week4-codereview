@@ -7,14 +7,15 @@ function Pizza(customerName, pizzaSize, pizzaToppings) {
 
 Pizza.prototype.calcPrice = function() {
   if (this.pizzaSize === "extra large") {
-    return this.pizzaPrice = 14;
+    this.pizzaPrice += 14;
   } else {
     return console.log("No Joy");
   }
+  return this.pizzaPrice;
 };
+
+
 
 var pizzaOrder = new Pizza("George", "extra large", ["Pepperoni", "Olives", "Mushrooms"])
 
-
-
-console.log(pizzaOrder.pizzaPrice);
+console.log(pizzaOrder.calcPrice());
