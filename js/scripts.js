@@ -1,9 +1,9 @@
 // Backend Logic
 
-unction Pizza(customerName, pizzaSize, pizzaToppings) {
+function Pizza(customerName, pizzaSize, pizzaToppings) {
   this.customerName = customerName,
   this.pizzaSize = pizzaSize,
-  this.pizzaToppings = pizzaToppingsArray,
+  this.pizzaToppings = pizzaToppings,
   this.pizzaPrice = 0.0
 }
 
@@ -42,29 +42,42 @@ Pizza.prototype.calcPrice = function() {
 
 // var pizzaOrder = new Pizza("George", "small", ["pepperoni", "chicken", "olives", "mushrooms"])
 //
-// console.log(pizzaOrder.calcPrice());
 
 //Frontend JavaScript
 
 $(document).ready(function() {
-  $("form#formInput").submit(function(event) {
+  $("#form-group").submit(function(event) {
     event.preventDefault();
 
 
-    var pizzaToppingsArray = [];
+var pizzaToppingsArray = [];
 
     var customerName = $("#customerNameInput").val();
     var pizzaSize = $("input:radio[name=sizeInput]:checked").val();
-    var pizzaToppings = $("input:radio[name=toppingsInput]:checked").val();
+    var pizzaToppings = $("input:checkbox[name=toppingsInput]:checked").each.val();
 
-    pizzaToppings.forEach(function(pizzaTopping) {
-      pizzaToppingsArray.push(pizzaTopping.val());
-    });
+    // (function() {
+    //   var pizzaToppingsArray = $(this).val();
+    // });
 
-    var myPizza = new Pizza(customerName, pizzaSize, pizzaToppingsArray);
+    console.log(pizzaToppingsArray);
+
+
+    // pizzaToppings.forEach(function(pizzaTopping) {
+    //   pizzaToppingsArray.push(pizzaTopping.val());
+    // });
+
+    var myPizza = new Pizza(customerName, pizzaSize, pizzaToppings);
+    console.log(myPizza);
     var price = myPizza.calcPrice;
 
+
     $("#outputPrice").text(price);
+    $("#outputCustomerName").text(customerName);
+
+
+    console.log(myPizza.calcPrice());
+
 
 
   });

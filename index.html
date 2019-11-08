@@ -15,7 +15,7 @@
         <h1>Welcome to Pizza Planet</h1>
       </div><!-- div for jumbotron -->
       <h2>Place your order!</h2>
-      <div class="form-group"> <!-- div for form area -->
+      <div id="form-group"> <!-- div for form area -->
         <form class="form-group" action="index.html" method="post">
           <label for="customerNameInput">Your name</label>
           <input id="customerNameInput"type="text" name="" value="">
@@ -38,36 +38,38 @@
               Small
             </label>
           </div> <!-- div for radio form area -->
-          <div class="radio-group2"> <!-- div for radio2 form area -->
+          <div class="checkbox-group"> <!-- div for radio2 form area -->
             <label>
-              <input type="radio" name="toppingsInput" value="pepperoni">
+              <input type="checkbox" name="toppingsInput" id="pepperoni" value="pepperoni">
               Pepperoni
             </label>
             <label>
-              <input type="radio" name="toppingsInput" value="chicken">
+              <input type="checkbox" name="toppingsInput" id="chicken" value="chicken">
               Chicken
             </label>
             <label>
-              <input type="radio" name="toppingsInput" value="anchovies">
+              <input type="checkbox" name="toppingsInput" id="anchovies" value="anchovies">
               Anchovies
             </label>
             <label>
-              <input type="radio" name="toppingsInput" value="mushrooms">
+              <input type="checkbox" name="toppingsInput" id="mushrooms" value="mushrooms">
               Mushrooms
             </label>
             <label>
-              <input type="radio" name="toppingsInput" value="olives">
+              <input type="checkbox" name="toppingsInput" id="olives" value="olives">
               Olives
             </label>
             <label>
-              <input type="radio" name="toppingsInput" value="artichokes">
+              <input type="checkbox" name="toppingsInput" id="artichokes" value="artichokes">
               Artichokes
             </label>
             <label>
-              <input type="radio" name="toppingsInput" value="extra cheese">
+              <input type="checkbox" name="toppingsInput" id="extra cheese" value="extra cheese">
               Extra Cheese
             </label>
+            <br>
 
+            <button type="submit" type="btn" name="button">Build It!</button>
 
           </div> <!-- div for radio2 form area -->
 
@@ -79,6 +81,8 @@
       <div class="output-area"> <!-- div for output area -->
         <h2>Your Price</h2>
         <p><span id="outputPrice"></span></p>
+
+        <p><span id="outputCustomerName"></span></p>
 
 
 
