@@ -1,96 +1,85 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/scripts.js"></script>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/scripts.js"></script>
 
-    <title>Pizza Planet</title>
-  </head>
-  <body>
-    <div class="container"> <!-- div for container -->
-      <div class="jumbotron">  <!-- div for jumbotron -->
-        <h1>Welcome to Pizza Planet</h1>
-      </div><!-- div for jumbotron -->
-      <h2>Place your order!</h2>
-      <div id="form-group"> <!-- div for form area -->
-        <form class="form-group" action="index.html" method="post">
-          <label for="customerNameInput">Your name</label>
-          <input id="customerNameInput"type="text" name="" value="">
+  <title>Pizza Planet</title>
+</head>
+<body>
+  <div class="container"> <!-- div for container -->
+    <div class="jumbotron">  <!-- div for jumbotron -->
+      <h1>Welcome to Pizza Planet</h1>
+    </div><!-- div for jumbotron -->
+    <h2>Place your order!</h2>
+    <div id="form-group"> <!-- div for form area -->
+      <form class="form-group" action="index.html" method="post">
+        <label for="customerNameInput">Your name</label>
+        <input id="customerNameInput"type="text" name="" value="">
 
-          <div class="radio-group"> <!-- div for radio form area -->
-            <label>
-              <input type="radio" name="sizeInput" value="extra large">
-              Extra Large
-            </label>
-            <label>
-              <input type="radio" name="sizeInput" value="large">
-              Large
-            </label>
-            <label>
-              <input type="radio" name="sizeInput" value="medium">
-              Medium
-            </label>
-            <label>
-              <input type="radio" name="sizeInput" value="small">
-              Small
-            </label>
-          </div> <!-- div for radio form area -->
-          <div id="altToppingsInput" class="checkbox-group"> <!-- div for radio2 form area -->
-            <label>
-              <input type="checkbox" name="toppingsInput" id="pepperoni" value="pepperoni">
-              Pepperoni
-            </label>
-            <label>
-              <input type="checkbox" name="toppingsInput" id="chicken" value="chicken">
-              Chicken
-            </label>
-            <label>
-              <input type="checkbox" name="toppingsInput" id="anchovies" value="anchovies">
-              Anchovies
-            </label>
-            <label>
-              <input type="checkbox" name="toppingsInput" id="mushrooms" value="mushrooms">
-              Mushrooms
-            </label>
-            <label>
-              <input type="checkbox" name="toppingsInput" id="olives" value="olives">
-              Olives
-            </label>
-            <label>
-              <input type="checkbox" name="toppingsInput" id="artichokes" value="artichokes">
-              Artichokes
-            </label>
-            <label>
-              <input type="checkbox" name="toppingsInput" id="extra cheese" value="extra cheese">
-              Extra Cheese
-            </label>
-            <br>
+        <div class="radio-group"> <!-- div for radio form area -->
+          <label>
+            <input type="radio" name="sizeInput" value="extra large">
+            Extra Large
+          </label>
+          <label>
+            <input type="radio" name="sizeInput" value="large">
+            Large
+          </label>
+          <label>
+            <input type="radio" name="sizeInput" value="medium">
+            Medium
+          </label>
+          <label>
+            <input type="radio" name="sizeInput" value="small">
+            Small
+          </label>
+        </div> <!-- div for radio form area -->
 
-            <button type="submit" type="btn" name="button">Build It!</button>
+        <div id="altToppingsInput" class="checkbox-group"> <!-- div for radio2 form area -->
+          <label>
+            <input type="checkbox" name="toppingsInput" id="pepperoni" value="pepperoni">
+            Pepperoni
+          </label>
+          <label>
+            <input type="checkbox" name="toppingsInput" id="chicken" value="chicken">
+            Chicken
+          </label>
+          <label>
+            <input type="checkbox" name="toppingsInput" id="anchovies" value="anchovies">
+            Anchovies
+          </label>
+          <label>
+            <input type="checkbox" name="toppingsInput" id="mushrooms" value="mushrooms">
+            Mushrooms
+          </label>
+          <label>
+            <input type="checkbox" name="toppingsInput" id="olives" value="olives">
+            Olives
+          </label>
+          <label>
+            <input type="checkbox" name="toppingsInput" id="artichokes" value="artichokes">
+            Artichokes
+          </label>
+          <label>
+            <input type="checkbox" name="toppingsInput" id="extra cheese" value="extra cheese">
+            Extra Cheese
+          </label>
+          <br>
+                    
+          <button type="submit" type="btn" name="button">Build It!</button>
+        </div> <!-- div for radio2 form area -->
+      </form>
 
-          </div> <!-- div for radio2 form area -->
+    </div> <!-- div for form area -->
+    <div class="output-area"> <!-- div for output area -->
+      <h2>Your Price</h2>
+      <p><span id="outputPrice"></span></p>
+    </div> <!-- div for output area -->
 
-        </form>
-
-
-
-      </div> <!-- div for form area -->
-      <div class="output-area"> <!-- div for output area -->
-        <h2>Your Price</h2>
-        <p><span id="outputPrice"></span></p>
-
-        <p><span id="outputCustomerName"></span></p>
-
-
-
-
-      </div> <!-- div for output area -->
-
-
-
-    </div> <!-- div for container -->
-  </body>
+  </div> <!-- div for container -->
+</body>
 </html>
