@@ -8,8 +8,8 @@ function Pizza(customerName, pizzaSize, pizzaToppingsArrays) {
 }
 
 Pizza.prototype.calcPrice = function() {
-  var toppingPrice = 0;
-  this.pizzaToppingsArrays.forEach(function(pizzaToppingsArray){
+  var toppingPrice = 0.0;
+  this.pizzaToppingsArrays.forEach(function(pizzaToppingsArray) {
     if (pizzaToppingsArray === "pepperoni") {
       toppingPrice += 2.1;
       } else if (pizzaToppingsArray === "chicken") {
@@ -20,7 +20,6 @@ Pizza.prototype.calcPrice = function() {
         toppingPrice += 0.5;
       }
   });
-  console.log(toppingPrice);
     this.pizzaPrice += toppingPrice;
   if (this.pizzaSize === "extra large") {
     this.pizzaPrice += 14;
@@ -40,8 +39,6 @@ Pizza.prototype.calcPrice = function() {
 
 
 
-// var pizzaOrder = new Pizza("George", "small", ["pepperoni", "chicken", "olives", "mushrooms"])
-//
 
 //Frontend JavaScript
 
@@ -66,10 +63,15 @@ console.log(pizzaToppingsArrays);
 
     var myPizza = new Pizza(customerName, pizzaSize, pizzaToppingsArrays);
     console.log(myPizza);
-    var price = myPizza.calcPrice;
+    console.log(myPizza.pizzaToppingsArrays);
+    var price = myPizza.calcPrice();
+
+    // var pizzaOrder = new Pizza("George", "small", ["pepperoni", "chicken", "olives", "mushrooms"])
+    //
+    // var price = pizzaOrder.calcPrice();
 
 
-    $("#outputPrice").text(price);
+    $("#outputPrice").text("$" + price);
     $("#outputCustomerName").text(customerName);
 
 
