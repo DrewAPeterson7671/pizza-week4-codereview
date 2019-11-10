@@ -43,8 +43,10 @@ $(document).ready(function() {
   $("#form-group").submit(function(event) {
     event.preventDefault();
 
+    // $(".form-group").remove();
+
     var pizzaToppingsArrays = [];
-    var toppingsSort = ""
+    var toppingsSort = "";
 
     var customerName = $("#customerNameInput").val();
     var pizzaSize = $("input:radio[name=sizeInput]:checked").val();
@@ -56,6 +58,7 @@ $(document).ready(function() {
     var myPizza = new Pizza(customerName, pizzaSize, pizzaToppingsArrays);
     var price = myPizza.calcPrice();
 
+    $(".output-area").show();
     $("#outputPrice").text("$" + price);
 
   });
