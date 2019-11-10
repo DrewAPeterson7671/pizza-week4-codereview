@@ -37,6 +37,7 @@ Pizza.prototype.calcPrice = function() {
 
 
 
+
 //Frontend JavaScript
 
 $(document).ready(function() {
@@ -59,7 +60,7 @@ $(document).ready(function() {
     var price = myPizza.calcPrice();
 
     $(".output-area").show();
-    $("#outputPrice").text("$" + price);
+    $("#outputPrice").text("$" + price.toFixed(2));
 
   });
 });
