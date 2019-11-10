@@ -10,9 +10,10 @@
   <title>Pizza Planet</title>
 </head>
 <body>
-  <div class="container"> <!-- div for container -->
+  <div class="container-fluid"> <!-- div for container -->
     <div class="jumbotron">  <!-- div for jumbotron -->
-      <h1>Welcome to Pizza Planet</h1>
+      <h1>Welcome to</h1>
+      <img class="mybox" id="main-logo" src="img/pizzaplanet.jpg" alt="Picture of pizza planet entrance">
     </div><!-- div for jumbotron -->
     <h2>Place your order!</h2>
     <div id="form-group"> <!-- div for form area -->
@@ -21,6 +22,7 @@
         <input id="customerNameInput"type="text" name="" value="">
 
         <div class="radio-group"> <!-- div for radio form area -->
+          <h3>Choose Your Pizza Size: </h3>
           <label>
             <input type="radio" name="sizeInput" value="extra large">
             Extra Large
@@ -40,6 +42,7 @@
         </div> <!-- div for radio form area -->
 
         <div id="altToppingsInput" class="checkbox-group"> <!-- div for radio2 form area -->
+          <h3>Choose Your Toppings: </h3>
           <label>
             <input type="checkbox" name="toppingsInput" id="pepperoni" value="pepperoni">
             Pepperoni
@@ -78,6 +81,7 @@
     <div class="output-area"> <!-- div for output area -->
       <h2>Your Price</h2>
       <p><span id="outputPrice"></span></p>
+      <h3>Your Order Details</h3>
       <p>Hello <span id="outputName"></span>! Here's the Pizza we will be beaming down:</p>
     </div> <!-- div for output area -->
 

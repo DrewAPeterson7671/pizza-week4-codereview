@@ -61,6 +61,8 @@ $(document).ready(function() {
 
     $(".output-area").show();
     $("#outputPrice").text("$" + price.toFixed(2));
+    $("#outputName").text(customerName);
+
 
   });
 });
