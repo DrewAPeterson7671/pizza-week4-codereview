@@ -40,7 +40,7 @@ _This project uses HTML5, CSS, JavaScript, jQuery and Bootstrap._
 
 ### License
 
-*PL*
+*GPL*
 
 
 
