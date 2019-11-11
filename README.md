@@ -11,6 +11,7 @@ _This application is designed to use forms for a user to enter options for a piz
 ## Behavior Driven Development
 
 | Behavior | Input Example | Output Example |
+| - | - | - |
 | Allow user to create a pizza object | order pizza | constructor makes a pizza object |
 | Allow user to choose pizza size | input size medium | medium price registered |
 | Allow user to choose toppings with pricing | input pineapple | +$ to price |
