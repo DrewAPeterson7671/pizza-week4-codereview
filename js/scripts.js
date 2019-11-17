@@ -11,7 +11,7 @@ Pizza.prototype.calcPrice = function() {
   var toppingPrice = 0.0;
   this.pizzaToppingsArrays.forEach(function(pizzaToppingsArray) {
     if (pizzaToppingsArray === "pepperoni") {
-      toppingPrice += 2.1;
+      toppingPrice += 2.11;
     } else if (pizzaToppingsArray === "chicken") {
       toppingPrice += 1.5;
     } else if (pizzaToppingsArray === "anchovies") {
@@ -32,7 +32,7 @@ Pizza.prototype.calcPrice = function() {
   } else {
     return console.log("No Joy");
   }
-  return this.pizzaPrice;
+  return this.pizzaPrice.toFixed(2);
 };
 
 
@@ -44,7 +44,8 @@ $(document).ready(function() {
   $("#form-group").submit(function(event) {
     event.preventDefault();
 
-    // $(".form-group").remove();
+
+
 
     var pizzaToppingsArrays = [];
     var toppingsSort = "";
@@ -57,12 +58,12 @@ $(document).ready(function() {
     });
 
     var myPizza = new Pizza(customerName, pizzaSize, pizzaToppingsArrays);
-    var price = myPizza.calcPrice();
+    myPizza.pizzaPrice = myPizza.calcPrice();
 
+    $("#customerNameInput").val("");
     $(".output-area").show();
-    $("#outputPrice").text("$" + price.toFixed(2));
-    $("#outputName").text(customerName);
-
+    $("#outputPrice").text("$" + myPizza.pizzaPrice);
+    $("#outputName").text(myPizza.customerName);
 
   });
 });
